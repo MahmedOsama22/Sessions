@@ -18,6 +18,7 @@
 import React from "react";
 // react plugin used to create charts
 import { Line, Bar } from "react-chartjs-2";
+import { PieChart } from 'react-minimal-pie-chart';
 
 // reactstrap components
 import {
@@ -66,6 +67,15 @@ class Dashboard extends React.Component {
         <div className="content">
           <Row>
             <Col xs={12} md={4}>
+              <Card>
+                <PieChart
+                  data={[
+                    { title: 'One', value: 10, color: '#E38627' },
+                    { title: 'Two', value: 15, color: '#C13C37' },
+                    { title: 'Three', value: 20, color: '#6A2135' },
+                  ]}
+                />;
+              </Card>
               {/* <Card className="card-chart">
                 <CardHeader>
                   <h5 className="card-category">Global Sales</h5>
