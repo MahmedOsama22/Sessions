@@ -18,7 +18,8 @@
 import React from "react";
 // react plugin used to create charts
 import { Line, Bar } from "react-chartjs-2";
-import { PieChart } from 'react-minimal-pie-chart';
+// import { PieChart } from 'react-minimal-pie-chart';
+import { Chart } from 'react-chartjs-2'
 
 // reactstrap components
 import {
@@ -67,15 +68,55 @@ class Dashboard extends React.Component {
         <div className="content">
           <Row>
             <Col xs={12} md={4}>
-              <Card>
-                <PieChart
-                  data={[
-                    { title: 'One', value: 10, color: '#E38627' },
-                    { title: 'Two', value: 15, color: '#C13C37' },
-                    { title: 'Three', value: 20, color: '#6A2135' },
-                  ]}
-                />;
-              </Card>
+              <Card className="card-chart">
+                <CardHeader>
+                  <h5 className="card-category">Global Sales</h5>
+                  <CardTitle tag="h4">Shipped Products</CardTitle>
+                  <UncontrolledDropdown>
+                    <DropdownToggle
+                      className="btn-round btn-outline-default btn-icon"
+                      color="default"
+                    >
+                      <i className="now-ui-icons loader_gear" />
+                    </DropdownToggle>
+                    <DropdownMenu right>
+                      <DropdownItem>Action</DropdownItem>
+                      <DropdownItem>Another Action</DropdownItem>
+                      <DropdownItem>Something else here</DropdownItem>
+                      <DropdownItem className="text-danger">
+                        Remove data
+                      </DropdownItem>
+                    </DropdownMenu>
+                  </UncontrolledDropdown>
+                </CardHeader>
+                <CardBody>
+                 <Chart
+  width={'500px'}
+  height={'300px'}
+  chartType="PieChart"
+  loader={<div>Loading Chart</div>}
+  data={[
+    ['Task', 'Hours per Day'],
+    ['Work', 11],
+    ['Eat', 2],
+    ['Commute', 2],
+    ['Watch TV', 2],
+    ['Sleep', 7],
+  ]}
+  options={{
+    title: 'My Daily Activities',
+  }}
+  rootProps={{ 'data-testid': '1' }}
+/>
+                </CardBody>
+                <CardFooter>
+                  <div className="stats">
+                    <i className="now-ui-icons arrows-1_refresh-69" /> Just
+                    Updated
+                  </div>
+                </CardFooter>
+              </Card> 
+                
               {/* <Card className="card-chart">
                 <CardHeader>
                   <h5 className="card-category">Global Sales</h5>
