@@ -369,42 +369,42 @@ class Dashboard extends React.Component {
                   <Table responsive>
                     <thead className="text-primary">
                       <tr>
-                        <th>Name</th>
+                        <th>Client Name</th>
                         <th>Country</th>
                         <th>City</th>
-                        <th className="text-right">Salary</th>
+                        <th className="text-right">Phone Number</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>Dakota Rice</td>
-                        <td>Niger</td>
+                        <td>Adam </td>
+                        <td>Youssef</td>
                         <td>Oud-Turnhout</td>
-                        <td className="text-right">$36,738</td>
+                        <td className="text-right">01000000002</td>
                       </tr>
                       <tr>
                         <td>Minerva Hooper</td>
                         <td>Curaçao</td>
                         <td>Sinaai-Waas</td>
-                        <td className="text-right">$23,789</td>
+                        <td className="text-right">01000000012</td>
                       </tr>
                       <tr>
                         <td>Sage Rodriguez</td>
                         <td>Netherlands</td>
                         <td>Baileux</td>
-                        <td className="text-right">$56,142</td>
+                        <td className="text-right">01000000212</td>
                       </tr>
                       <tr>
                         <td>Doris Greene</td>
                         <td>Malawi</td>
                         <td>Feldkirchen in Kärnten</td>
-                        <td className="text-right">$63,542</td>
+                        <td className="text-right">01000000005</td>
                       </tr>
                       <tr>
                         <td>Mason Porter</td>
                         <td>Chile</td>
                         <td>Gloucester</td>
-                        <td className="text-right">$78,615</td>
+                        <td className="text-right">01000000007</td>
                       </tr>
                     </tbody>
                   </Table>
