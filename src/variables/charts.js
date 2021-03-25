@@ -257,42 +257,47 @@ const dashboardShippedProductsChart = {
     gradientStroke.addColorStop(0, "#80b6f4");
     gradientStroke.addColorStop(1, chartColor);
     var gradientFill = ctx.createLinearGradient(0, 170, 0, 50);
-    gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
-    gradientFill.addColorStop(1, "rgba(249, 99, 59, 0.40)");
+    // gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
+    // gradientFill.addColorStop(1, "rgba(249, 99, 59, 0.40)");
     return {
-      labels: [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec",
-      ],
+      // labels: [
+      //   "Jan",
+      //   "Feb",
+      //   "Mar",
+      //   "Apr",
+      //   "May",
+      //   "Jun",
+      //   "Jul",
+      //   "Aug",
+      //   "Sep",
+      //   "Oct",
+      //   "Nov",
+      //   "Dec",
+      // ],
+      labels: ["Satisfied", "Natural", "Unsatisfied"],
       datasets: [
         {
           label: "Active Users",
-          borderColor: "#f96332",
-          pointBorderColor: "#FFF",
-          pointBackgroundColor: "#f96332",
-          pointBorderWidth: 2,
-          pointHoverRadius: 4,
-          pointHoverBorderWidth: 1,
-          pointRadius: 4,
+          borderColor: [
+            "rgba(24, 206, 15, 1)",
+            "rgba(249, 99, 59, 1)", 
+            "rgba(44, 168, 255, 1)"
+          ],
+
           fill: true,
-          backgroundColor: gradientFill,
-          borderWidth: 2,
-          data: [542, 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 630],
+          backgroundColor: [
+            "rgba(24, 206, 15, 0.2)", // Green
+            "rgba(249, 99, 59, 0.2)", // Red  
+            "rgba(44, 168, 255, 0.2)" // Blue
+          ],
+          borderWidth: 1.5,
+          // data: [542, 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 630],
+          data: [542, 330, 430]
         },
       ],
     };
   },
-  options: gradientChartOptionsConfiguration,
+  // options: gradientChartOptionsConfiguration,
 };
 
 // ##############################
@@ -306,8 +311,8 @@ const dashboardAllProductsChart = {
     gradientStroke.addColorStop(0, "#18ce0f");
     gradientStroke.addColorStop(1, chartColor);
     var gradientFill = ctx.createLinearGradient(0, 170, 0, 50);
-    gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
-    gradientFill.addColorStop(1, hexToRGB("#18ce0f", 0.4));
+    // gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
+    // gradientFill.addColorStop(1, hexToRGB("#18ce0f", 0.4));
     return {
       labels: ["12pm,", "3pm", "6pm", "9pm", "12am", "3am", "6am", "9am"],
       datasets: [
@@ -321,7 +326,7 @@ const dashboardAllProductsChart = {
           pointHoverBorderWidth: 1,
           pointRadius: 4,
           fill: true,
-          backgroundColor: gradientFill,
+          backgroundColor: "rgba(24, 206, 15, 0.2)",
           borderWidth: 2,
           data: [40, 500, 650, 700, 1200, 1250, 1300, 1900],
         },
@@ -359,7 +364,7 @@ const dashboard24HoursPerformanceChart = {
       datasets: [
         {
           label: "Active Countries",
-          backgroundColor: gradientFill,
+          backgroundColor: "rgba(44, 168, 255, 0.2)",
           borderColor: "#2CA8FF",
           pointBorderColor: "#FFF",
           pointBackgroundColor: "#2CA8FF",

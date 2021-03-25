@@ -17,9 +17,9 @@
 */
 import React from "react";
 // react plugin used to create charts
-import { Line, Bar } from "react-chartjs-2";
+import { Line, Bar, Pie } from "react-chartjs-2";
 // import { PieChart } from 'react-minimal-pie-chart';
-import { Chart } from 'react-chartjs-2'
+import { Chart } from "react-chartjs-2";
 
 // reactstrap components
 import {
@@ -39,7 +39,7 @@ import {
   Label,
   FormGroup,
   Input,
-  UncontrolledTooltip,
+  UncontrolledTooltip
 } from "reactstrap";
 
 // core components
@@ -47,9 +47,9 @@ import PanelHeader from "components/PanelHeader/PanelHeader.js";
 
 import {
   dashboardPanelChart,
-  // dashboardShippedProductsChart,
+  dashboardShippedProductsChart,
   dashboardAllProductsChart,
-  dashboard24HoursPerformanceChart,
+  dashboard24HoursPerformanceChart
 } from "variables/charts.js";
 
 class Dashboard extends React.Component {
@@ -90,24 +90,12 @@ class Dashboard extends React.Component {
                   </UncontrolledDropdown>
                 </CardHeader>
                 <CardBody>
-                 <Chart
-  width={'500px'}
-  height={'300px'}
-  chartType="PieChart"
-  loader={<div>Loading Chart</div>}
-  data={[
-    ['Task', 'Hours per Day'],
-    ['Work', 11],
-    ['Eat', 2],
-    ['Commute', 2],
-    ['Watch TV', 2],
-    ['Sleep', 7],
-  ]}
-  options={{
-    title: 'My Daily Activities',
-  }}
-  rootProps={{ 'data-testid': '1' }}
-/>
+                  <div className="chart-area">
+                    <Pie
+                      data={dashboardShippedProductsChart.data}
+                      options={dashboardShippedProductsChart.options}
+                    />
+                  </div>
                 </CardBody>
                 <CardFooter>
                   <div className="stats">
@@ -115,8 +103,8 @@ class Dashboard extends React.Component {
                     Updated
                   </div>
                 </CardFooter>
-              </Card> 
-                
+              </Card>
+
               {/* <Card className="card-chart">
                 <CardHeader>
                   <h5 className="card-category">Global Sales</h5>
