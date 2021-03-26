@@ -203,8 +203,8 @@ class Dashboard extends React.Component {
             </Col>
           </Row>
           <Row>
-            <Col xs={12} md={6}>
-              <Card className="card-tasks">
+            {/* <Col xs={12} md={6}> */}
+              {/* <Card className="card-tasks">
                 <CardHeader>
                   <h5 className="card-category">Backend Development</h5>
                   <CardTitle tag="h4">Tasks</CardTitle>
@@ -357,8 +357,8 @@ class Dashboard extends React.Component {
                     minutes ago
                   </div>
                 </CardFooter>
-              </Card>
-            </Col>
+              </Card> */}
+            {/* </Col> */}
             <Col xs={12} md={6}>
               <Card>
                 <CardHeader>

@@ -1,5 +1,5 @@
 import React from "react";
-
+// import Timer from"../views/Timer"
 // reactstrap components
 import {
   Card,
@@ -61,8 +61,10 @@ class RegularTables extends React.Component {
                 <div 
                 // className="modal-footer"
                 >
-                  <Button color="default" type="button">
-                   Started/Ended
+                  <Button
+                   color="default" type="button">
+                   {/* Started/Ended */}
+                  {/* <Timer/> */}
                   </Button>
                   {/* <Button
                     color="danger"
