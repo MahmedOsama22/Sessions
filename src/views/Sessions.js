@@ -9,94 +9,111 @@ import {
   CardTitle,
   Table,
   Row,
-  Col,
+  Col
 } from "reactstrap";
 
 // core components
-// import PanelHeader from "components/PanelHeader/PanelHeader.js";
+import PanelHeader from "components/PanelHeader/PanelHeader.js";
 
 import { thead, tbody } from "variables/general";
+import SessionTimer from "./Timer";
 
 class RegularTables extends React.Component {
   render() {
     return (
       <>
-        {/* <PanelHeader size="sm" /> */}
+        <PanelHeader size="sm" />
         <div className="content">
           <Row>
-          <Col md="6">
-              <h4>Modal</h4>
-              <Button
-                color="primary"
-                className="mr-1"
-                // onClick={() => setModal1(true)}
-              >
-                  Start session
-                  </Button>
-              <Button color="info"
-              //  onClick={() => setModal2(true)}
-               >
-                  End session
-              </Button>
-              {/* <Modal isOpen={modal1} toggle={() => setModal1(false)}> */}
-                <div 
-                // className="modal-header justify-content-center"
-                >
-                  {/* <button */}
-                    {/* className="close" */}
-                    {/* type="button" */}
-                    {/* // onClick={() => setModal1(false)} */}
-                  {/* > */}
-                    {/* <i className="now-ui-icons ui-1_simple-remove"></i> */}
-                  {/* </button> */}
-                  <h4
-                  //  className="title title-up"
-                   >Session Details</h4>
-                </div>
-                {/* <ModalBody> */}
-                  <p>
-                    Far far away, behind the word mountains, far from the
-                  </p>
-                {/* </ModalBody> */}
-                <div 
-                // className="modal-footer"
-                >
+            <Col md="12">
+              <Card>
+                <CardHeader>
+                <CardTitle tag="h4">Session</CardTitle>
+                </CardHeader>
+                <CardBody>
+                  <Row>
+                    <SessionTimer />
+
+                  </Row>
                   <Button
-                   color="default" type="button">
-                   {/* Started/Ended */}
-                  {/* <Timer/> */}
+                    color="primary"
+                    className="mr-5"
+                    // onClick={() => setModal1(true)}
+                  >
+                    Start session
                   </Button>
-                  {/* <Button
+                  <Button
+                    color="info"
+                    //  onClick={() => setModal2(true)}
+                  >
+                    End session
+                  </Button>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
+          <Row>
+            <Col md="6">
+              <h4>Modal</h4>
+
+              {/* <Modal isOpen={modal1} toggle={() => setModal1(false)}> */}
+              <div
+              // className="modal-header justify-content-center"
+              >
+                {/* <button */}
+                {/* className="close" */}
+                {/* type="button" */}
+                {/* // onClick={() => setModal1(false)} */}
+                {/* > */}
+                {/* <i className="now-ui-icons ui-1_simple-remove"></i> */}
+                {/* </button> */}
+                <h4
+                //  className="title title-up"
+                >
+                  Session Details
+                </h4>
+              </div>
+              {/* <ModalBody> */}
+              <p>Far far away, behind the word mountains, far from the</p>
+              {/* </ModalBody> */}
+              <div
+              // className="modal-footer"
+              >
+                <Button color="default" type="button">
+                  {/* Started/Ended */}
+                  {/* <Timer/> */}
+                </Button>
+                {/* <Button
                     color="danger"
                     type="button"
                     // onClick={() => setModal1(false)}
                   >
                     Close
                   </Button> */}
-                </div>
+              </div>
               {/* </Modal> */}
               {/* <Modal */}
-                {/* // modalClassName="modal-mini modal-info" */}
-                {/* // toggle={() => setModal2(false)} */}
-                {/* // isOpen={modal2} */}
+              {/* // modalClassName="modal-mini modal-info" */}
+              {/* // toggle={() => setModal2(false)} */}
+              {/* // isOpen={modal2} */}
               {/* > */}
-                <div className="modal-header justify-content-center">
-                  <div 
-                  // className="modal-profile"
-                  >
-                    {/* <i className="now-ui-icons users_circle-08"></i> */}
-                  </div>
-                </div>
-                {/* <ModalBody> */}
-                  {/* <p>Always have an access to your profile</p> */}
-                {/* </ModalBody> */}
-                <div 
-                // className="modal-footer"
+              <div className="modal-header justify-content-center">
+                <div
+                // className="modal-profile"
                 >
-                  {/* <Button className="btn-neutral" color="link" type="button">
+                  {/* <i className="now-ui-icons users_circle-08"></i> */}
+                </div>
+              </div>
+              {/* <ModalBody> */}
+              {/* <p>Always have an access to your profile</p> */}
+              {/* </ModalBody> */}
+              <div
+              // className="modal-footer"
+              >
+                {/* <Button className="btn-neutral" color="link" type="button">
                     Back
                   </Button> */}
-                  {/* <Button
+                {/* <Button
                     className="btn-neutral"
                     color="link"
                     type="button"
@@ -104,7 +121,7 @@ class RegularTables extends React.Component {
                   >
                     Close
                   </Button> */}
-                </div>
+              </div>
               {/* </Modal> */}
             </Col>
             <Col xs={12}>
