@@ -70,15 +70,15 @@ class Dashboard extends React.Component {
             <Col xs={12} md={4}>
               <Card className="card-chart">
                 <CardHeader>
-                  <h5 className="card-category">Global Sales</h5>
+                  {/* <h5 className="card-category">Global Sales</h5> */}
                   <CardTitle tag="h4">Shipped Products</CardTitle>
                   <UncontrolledDropdown>
-                    <DropdownToggle
-                      className="btn-round btn-outline-default btn-icon"
-                      color="default"
-                    >
-                      <i className="now-ui-icons loader_gear" />
-                    </DropdownToggle>
+                    {/* <DropdownToggle */}
+                      {/* className="btn-round btn-outline-default btn-icon" */}
+                      {/* color="default" */}
+                    {/* > */}
+                      {/* <i className="now-ui-icons loader_gear" /> */}
+                    {/* </DropdownToggle> */}
                     <DropdownMenu right>
                       <DropdownItem>Action</DropdownItem>
                       <DropdownItem>Another Action</DropdownItem>
@@ -99,8 +99,8 @@ class Dashboard extends React.Component {
                 </CardBody>
                 <CardFooter>
                   <div className="stats">
-                    <i className="now-ui-icons arrows-1_refresh-69" /> Just
-                    Updated
+                    {/* <i className="now-ui-icons arrows-1_refresh-69" /> Just
+                    Updated */}
                   </div>
                 </CardFooter>
               </Card>
@@ -145,15 +145,16 @@ class Dashboard extends React.Component {
             <Col xs={12} md={4}>
               <Card className="card-chart">
                 <CardHeader>
-                  <h5 className="card-category">2020 Sales</h5>
-                  <CardTitle tag="h4">All products</CardTitle>
+                  {/* <h5 className="card-category">24 Hours Performance
+                  </h5> */}
+                  <CardTitle tag="h4">24 Hours Performance</CardTitle>
                   <UncontrolledDropdown>
-                    <DropdownToggle
+                    {/* <DropdownToggle
                       className="btn-round btn-outline-default btn-icon"
                       color="default"
                     >
                       <i className="now-ui-icons loader_gear" />
-                    </DropdownToggle>
+                    </DropdownToggle> */}
                     <DropdownMenu right>
                       <DropdownItem>Action</DropdownItem>
                       <DropdownItem>Another Action</DropdownItem>
@@ -174,8 +175,8 @@ class Dashboard extends React.Component {
                 </CardBody>
                 <CardFooter>
                   <div className="stats">
-                    <i className="now-ui-icons arrows-1_refresh-69" /> Just
-                    Updated
+                    {/* <i className="now-ui-icons arrows-1_refresh-69" /> Just
+                    Updated */}
                   </div>
                 </CardFooter>
               </Card>
@@ -183,8 +184,8 @@ class Dashboard extends React.Component {
             <Col xs={12} md={4}>
               <Card className="card-chart">
                 <CardHeader>
-                  <h5 className="card-category">Email Statistics</h5>
-                  <CardTitle tag="h4">24 Hours Performance</CardTitle>
+                  {/* <h5 className="card-category">Email Statistics</h5> */}
+                  <CardTitle tag="h4">Month Performance</CardTitle>
                 </CardHeader>
                 <CardBody>
                   <div className="chart-area">
@@ -196,7 +197,7 @@ class Dashboard extends React.Component {
                 </CardBody>
                 <CardFooter>
                   <div className="stats">
-                    <i className="now-ui-icons ui-2_time-alarm" /> Last 7 days
+                    {/* <i className="now-ui-icons ui-2_time-alarm" /> Last 7 days */}
                   </div>
                 </CardFooter>
               </Card>
@@ -370,40 +371,40 @@ class Dashboard extends React.Component {
                     <thead className="text-primary">
                       <tr>
                         <th>Client Name</th>
-                        <th>Country</th>
                         <th>City</th>
+                        <th>The Satisfaction</th>
                         <th className="text-right">Phone Number</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td>Adam </td>
-                        <td>Youssef</td>
-                        <td>Oud-Turnhout</td>
+                        <td>Cairo</td>
+                        <td>satisfied</td>
                         <td className="text-right">01000000002</td>
                       </tr>
                       <tr>
                         <td>Minerva Hooper</td>
-                        <td>Curaçao</td>
-                        <td>Sinaai-Waas</td>
+                        <td>Giza</td>
+                        <td>not satisfied</td>
                         <td className="text-right">01000000012</td>
                       </tr>
                       <tr>
                         <td>Sage Rodriguez</td>
-                        <td>Netherlands</td>
-                        <td>Baileux</td>
+                        <td>Aswan</td>
+                        <td>satisfied</td>
                         <td className="text-right">01000000212</td>
                       </tr>
                       <tr>
                         <td>Doris Greene</td>
-                        <td>Malawi</td>
-                        <td>Feldkirchen in Kärnten</td>
+                        <td>Giza</td>
+                        <td>satisfied</td>
                         <td className="text-right">01000000005</td>
                       </tr>
                       <tr>
                         <td>Mason Porter</td>
-                        <td>Chile</td>
-                        <td>Gloucester</td>
+                        <td>Cairo</td>
+                        <td>not satisfied</td>
                         <td className="text-right">01000000007</td>
                       </tr>
                     </tbody>
